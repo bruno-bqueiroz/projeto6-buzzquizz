@@ -1,5 +1,6 @@
 let container;
 let caixa;
+
 function corpo(){
     container = document.querySelector("div");
     container.innerHTML = `
@@ -22,15 +23,25 @@ function quizz (){
                 <div class ="quizz1">
             
                 </div>
-                <div class ="quizz1">
-            
-                </div> 
-                <div class ="quizz1">
-            
-                </div>   
             </div>    
         </div>
 
     `
 }
 quizz();
+
+let mensagens=[];
+
+
+function buscarDados(){
+    let promessa = axios.get("https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/1");
+         promessa.then(popularDados);
+ 
+}
+buscarDados();
+
+function popularDados(resposta){
+   mensagens = resposta.data;  
+   console.log(mensagens);
+}
+popularDados();
