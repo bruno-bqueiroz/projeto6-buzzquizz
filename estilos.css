@@ -1,0 +1,16 @@
+body {
+    width: 100vw;
+    background-color: #E5E5E5;
+    margin: 0%; 
+    
+}
+.topo{
+    width: 100%;
+    height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EC362D;
+    font-size: 30px;
+    color: #E5E5E5;
+}
