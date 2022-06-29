@@ -57,7 +57,21 @@ div{
     width: 340px;
     height: 181px;
     background-color: yellow;
+    position: absolute;
+    
+    
+} .quizz1 strong{
+    position: relative;
+}
 
+
+.quizz1 img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+    
+    
 }
 
 

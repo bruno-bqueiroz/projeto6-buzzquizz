@@ -1,5 +1,7 @@
 let container;
-let caixa;
+let caixa = [];
+let dadosQuizz=[];
+const urlAPI = "https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes";
 
 function corpo(){
     container = document.querySelector("div");
@@ -16,32 +18,45 @@ function quizz (){
     container.innerHTML += `
         <div class ="quizzes">
             <div class ="quizzUsuario">
-            
             </div>
            
             <div class ="quizzServidor">
-                <div class ="quizz1">
+                
             
                 </div>
             </div>    
         </div>
 
-    `
+    `;
+    renderizarMensagens();
 }
 quizz();
 
-let mensagens=[];
-
 
 function buscarDados(){
-    let promessa = axios.get("https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/1");
-         promessa.then(popularDados);
- 
+    let promessa = axios.get(`https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/1`);
+    promessa.then(popularDados);
 }
 buscarDados();
 
+
 function popularDados(resposta){
-   mensagens = resposta.data;  
-   console.log(mensagens);
+    dadosQuizz = resposta.data;  
+    renderizarMensagens();
+    console.log(dadosQuizz);
 }
 popularDados();
+
+function renderizarMensagens() {
+    let containerMensagens = document.querySelector(".quizzServidor");
+       
+        containerMensagens.innerHTML = `
+        <div class="quizz1">    
+            <img src="${dadosQuizz.image}">
+            <strong>${dadosQuizz.title}</strong>
+        </div>
+    `;
+
+}
+
+renderizarMensagens();
