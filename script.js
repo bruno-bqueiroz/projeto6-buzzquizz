@@ -1,21 +1,21 @@
 let container;
 let caixa = [];
-let dadosQuizz=[];
+let dadosQuizz = [];
 const urlAPI = "https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes";
 
-function corpo(){
-    container = document.querySelector("div");
-    container.innerHTML = `
+function corpo() {
+  container = document.querySelector("div");
+  container.innerHTML = `
         <div class="topo">
             <b>BuzzQuizz</b>
         </div>
                      
-    `
+    `;
 }
 corpo();
 
-function quizz (){
-    container.innerHTML += `
+function quizz() {
+  container.innerHTML += `
         <div class ="quizzes">
             <div class ="quizzUsuario">
             </div>
@@ -28,40 +28,37 @@ function quizz (){
         </div>
 
     `;
-    renderizarMensagens();
+  renderizarMensagens();
 }
 quizz();
 
-
-function buscarDados(){
-    for (let i = 1; i < 10  ; i++){
-    let promessa = axios.get(`https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/${i}`);
+function buscarDados() {
+  for (let i = 1; i < 9; i++) {
+    let promessa = axios.get(
+      `https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/${i}`
+    );
     promessa.then(popularDados);
-    }
+  }
 }
 buscarDados();
 
-
-
-function popularDados(resposta){
-    dadosQuizz = resposta?.data;  
-    renderizarMensagens();
-    
+function popularDados(resposta) {
+  dadosQuizz = resposta?.data;
+  renderizarMensagens();
 }
 popularDados();
 
 function renderizarMensagens() {
-    if (dadosQuizz.length <= 0) return null;
-    let containerMensagens =  document.querySelector(".quizzServidor");
-       
-        containerMensagens.innerHTML += `
+  if (dadosQuizz.length <= 0) return null;
+  let containerMensagens = document.querySelector(".quizzServidor");
+
+  containerMensagens.innerHTML += `
         <div class="quizz1" onclick="Tela2(this)">    
             <img src="${dadosQuizz.image}">
             <strong>${dadosQuizz.title}</strong>
         </div>
     `;
-    console.log(dadosQuizz);
-
+  console.log(dadosQuizz);
 }
 
 renderizarMensagens();
