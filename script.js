@@ -34,7 +34,7 @@ quizz();
 
 
 function buscarDados(){
-    for (let i = 0; i < 9; i++){
+    for (let i = 1; i < 6; i++){
     let promessa = axios.get(`https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/${i}`);
     promessa.then(popularDados);
     }
@@ -50,8 +50,9 @@ function popularDados(resposta){
 }
 popularDados();
 
+
 function renderizarMensagens() {
-    let containerMensagens = document.querySelector(".quizzServidor");
+    let containerMensagens =  document.querySelector(".quizzServidor");
        
         containerMensagens.innerHTML += `
         <div class="quizz1" onclick="Tela2(this)">    
