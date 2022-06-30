@@ -34,7 +34,7 @@ quizz();
 
 
 function buscarDados(){
-    for (let i = 1; i < 6; i++){
+    for (let i = 1; i < 9; i++){
     let promessa = axios.get(`https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/${i}`);
     promessa.then(popularDados);
     }
@@ -44,14 +44,14 @@ buscarDados();
 
 
 function popularDados(resposta){
-    dadosQuizz = resposta.data;  
+    dadosQuizz = resposta?.data;  
     renderizarMensagens();
-    console.log(dadosQuizz);
+    
 }
 popularDados();
 
-
 function renderizarMensagens() {
+    if (dadosQuizz.length <= 0) return null;
     let containerMensagens =  document.querySelector(".quizzServidor");
        
         containerMensagens.innerHTML += `
@@ -60,7 +60,7 @@ function renderizarMensagens() {
             <strong>${dadosQuizz.title}</strong>
         </div>
     `;
-
+    console.log(dadosQuizz);
 
 }
 
