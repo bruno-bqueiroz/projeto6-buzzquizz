@@ -34,7 +34,7 @@ quizz();
 
 
 function buscarDados(){
-    for (let i = 1; i < 9; i++){
+    for (let i = 1; i < 10  ; i++){
     let promessa = axios.get(`https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/${i}`);
     promessa.then(popularDados);
     }
