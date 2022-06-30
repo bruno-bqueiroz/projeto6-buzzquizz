@@ -56,14 +56,7 @@ div{
 .quizz1{
     width: 340px;
     height: 181px;
-    background-color: rgb(14, 14, 14);
-    
-
-    
-    
-    
-    
-    
+ 
 } .quizz1 strong{
     
     bottom: -60px;
@@ -86,7 +79,7 @@ div{
 @media (max-width: 1100px) {
     .quizzes{
         width: 340px;
-        margin-top: 150px;
+        margin-top: 730px;
     }
     .quizzServidor {
         
@@ -98,5 +91,5 @@ div{
         margin-bottom: 10px;
         
     }
-
+   
 }

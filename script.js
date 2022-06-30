@@ -34,10 +34,13 @@ quizz();
 
 
 function buscarDados(){
-    let promessa = axios.get(`https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/1`);
+    for (let i = 0; i < 9; i++){
+    let promessa = axios.get(`https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/${i}`);
     promessa.then(popularDados);
+    }
 }
 buscarDados();
+
 
 
 function popularDados(resposta){
@@ -50,12 +53,13 @@ popularDados();
 function renderizarMensagens() {
     let containerMensagens = document.querySelector(".quizzServidor");
        
-        containerMensagens.innerHTML = `
-        <div class="quizz1">    
+        containerMensagens.innerHTML += `
+        <div class="quizz1" onclick="Tela2(this)">    
             <img src="${dadosQuizz.image}">
             <strong>${dadosQuizz.title}</strong>
         </div>
     `;
+
 
 }
 
