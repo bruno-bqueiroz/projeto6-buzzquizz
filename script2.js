@@ -9,19 +9,27 @@ function apenasUmQuizz() {
 apenasUmQuizz();
 
 function openQuizz(quizz) {
-  console.log(quizz);
   let quizzQuestions = quizz.data.questions;
   let quizzOrganize = document.querySelector(".conteudo");
-  quizzOrganize.innerHTML = "";
+
   quizzOrganize.innerHTML += `<div class= "quizzHead"><p class="tituloQuizz">${quizz.data.title}</p> <img class="fundo" src="${quizz.data.image}"/> </div>`;
-  quizzQuestions.map((question) => {
-    quizzOrganize.innerHTML += `<div class = "questoes">${question.title} </div>
-            <div class="cor">${question.color}</div>`;
-    question.answers.map((answer) => {
-      quizzOrganize.innerHTML += `<div class="container"><div class="fotos"><img src="${answer.image}"></div>
-                        <div class="respostas">${answer.text}</div>`;
-    });
-  });
+  for (let i = 0; i < quizzQuestions.length; i++) {
+    let enterQuestions = document.querySelector(".questoes");
+
+    enterQuestions.innerHTML += `<div class = "perguntas">${quizzQuestions[i].title}</div>
+    <div class="cor">${quizzQuestions[i].color}</div>`;
+    console.log(quizzQuestions[i].answers);
+    const container = document.createElement("div");
+    container.classList.add(`respostas-${i}`);
+    let respostas1 = document.querySelector(".questoes");
+    respostas1.appendChild(container);
+    for (let a = 0; a < quizzQuestions[i].answers.length; a++) {
+      let quizzAnswers = quizz.data.questions[i].answers;
+      console.log(quizz.data.questions[i].answers);
+      let enterQuestions = document.querySelector(`.respostas-${i}`);
+      enterQuestions.innerHTML += `<img class = "respostas" src="${quizzAnswers[a].image}"</div> <div class = "answer">${quizzAnswers[a].isCorrectAnswer}</div> <div class="texto">${quizzAnswers[a].text}</div>`;
+    }
+  }
 }
 
 function errorQuizz() {
