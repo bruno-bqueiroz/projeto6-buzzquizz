@@ -71,8 +71,8 @@ function renderizarMensagensUsuario() {
         containerMensagensUsuario.innerHTML = "";
         containerMensagensUsuario.innerHTML = `
           <div class="vazio">    
-            <p> Você não criou nenhum </b> quizz ainda :( </p>
-              <button onclick="criarQuizz(quizz)"> Criar Quizz </button>
+            <p> Você não criou nenhum quizz ainda :( </p>
+              <button onclick="criarQuizz(this)"> Criar Quizz </button>
           </div>
       `;
       return;
@@ -96,13 +96,33 @@ function renderizarMensagensUsuario() {
   // terceira tela
   function criarQuizz(elemento){
     let Elemento = document.querySelector(".quizzes");
-   //Elemento.innerHTML = "";
-
-    
-
-
+   
+        Elemento.innerHTML = `
+        <div class="tela3">
+          <b>Comece pelo começo</b>
+          <input placeholder="Título do seu quizz" class="titulo"></input>
+          <input placeholder="URL da imagem do seu quizz" class="url"></input>
+          <input placeholder="Quantidade de perguntas do quizz" class="nPerguntas"></input>
+          <input placeholder="Quantidade de níveis do quizz" class="nNiveis"></input>
+          <button onclick="tela32(this)"> Prosseguir para criar perguntas </button>
+        </div>
+        `;
     }
   criarQuizz();
+
+  function tela32(){
+    let titulo = document.querySelector("input.titulo").value;
+    let url= document.querySelector("input.url").value;
+    let perguntas= document.querySelector("input.nPerguntas").value;
+    let niveis = document.querySelector("input.nNiveis").value;
+
+    if(titulo.length);
+
+  }
+  tela32();
+
+
+  
 
 
 
