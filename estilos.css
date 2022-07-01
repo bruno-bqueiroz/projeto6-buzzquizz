@@ -33,6 +33,11 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.escondido{
+  display: none;
+}
+
 .quizzUsuario {
   width: 100%;
   height: auto; /* deve ser mudado para auto*/

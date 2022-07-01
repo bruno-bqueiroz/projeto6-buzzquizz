@@ -16,21 +16,20 @@ function corpo() {
 corpo();
 
 function quizz() {
+ 
   container.innerHTML += `
-        <div class ="quizzes">
-            <div class ="quizzUsuario">
+        <div class="quizzes">
+            <div class="quizzUsuario">
             </div>
            
-            <div class ="quizzServidor">
-                
-            
-                </div>
-            </div>    
-        </div>
-
+            <div class="quizzServidor">      
+            </div>
+          </div>    
     `;
     renderizarMensagensUsuario();
   renderizarMensagens();
+  
+  
 }
 quizz();
 
@@ -55,14 +54,12 @@ popularDados();
 function renderizarMensagens() {
   if (dadosQuizz.length <= 0) return null;
   let containerMensagens = document.querySelector(".quizzServidor");
-
   containerMensagens.innerHTML += `
         <div class="quizz1" onclick="Tela2(this)">    
             <img src="${dadosQuizz.image}">
             <strong>${dadosQuizz.title}</strong>
         </div>
     `;
-  console.log(dadosQuizz);
 }
 renderizarMensagens();
 
@@ -74,8 +71,8 @@ function renderizarMensagensUsuario() {
         containerMensagensUsuario.innerHTML = "";
         containerMensagensUsuario.innerHTML = `
           <div class="vazio">    
-            <p>Você não criou  nenhum quizz ainda :(</p>
-              <button onclick="criarQuizz(this)"> Criar Quizz </button>
+            <p> Você não criou nenhum </b> quizz ainda :( </p>
+              <button onclick="criarQuizz(quizz)"> Criar Quizz </button>
           </div>
       `;
       return;
@@ -84,12 +81,28 @@ function renderizarMensagensUsuario() {
     let containerMensagensUsuario = document.querySelector(".quizzUsuario");
   
     containerMensagensUsuario.innerHTML += `
-          <div class="quizz1" onclick="Tela2(this)">    
+          <div class="quizz1" onclick="quizDoUsuario()">    
               <img src="${dadosQuizzUsuario.image}">
               <strong>${dadosQuizzUsuario.title}</strong>
           </div>
       `;
-    console.log(dadosQuizzUsuario);
+      criarQuizz();
+  
   }
   
   renderizarMensagensUsuario();
+
+
+  // terceira tela
+  function criarQuizz(elemento){
+    let Elemento = document.querySelector(".quizzes");
+   //Elemento.innerHTML = "";
+
+    
+
+
+    }
+  criarQuizz();
+
+
+
