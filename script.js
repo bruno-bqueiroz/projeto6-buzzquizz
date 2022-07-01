@@ -116,13 +116,13 @@ function renderizarMensagensUsuario() {
     let perguntas= document.querySelector("input.nPerguntas").value;
     let niveis = document.querySelector("input.nNiveis").value;
 
-    if(true){//20 < titulo.length < 65 && perguntas > 2  && niveis > 1
+    if(20 < titulo.length < 65 && perguntas > 2  && niveis > 1){
       let Elemento = document.querySelector(".tela3");
       Elemento.innerHTML = "";
         Elemento.innerHTML = `
           <b>Crie suas perguntas</b>
         <div class="tela32">
-          
+
           <div class="pergunta">
             <div><b>Pergunta 1</b></div>
               <input placeholder="Texto da pergunta" class="titulo"></input>
@@ -137,28 +137,35 @@ function renderizarMensagensUsuario() {
             <div><b>Respostas incorretas</b></div>
               <input placeholder="Resposta incorreta 1" class="titulo"></input>
               <input placeholder="URL da imagem 1" class="url"></input>
-          </div>
-          <div class="pergunta">
-            <div><b>Respostas incorretas</b></div>
               <input placeholder="Resposta incorreta 2" class="titulo"></input>
               <input placeholder="URL da imagem 2" class="url"></input>
-          </div>
-          <div class="pergunta">
-            <div><b>Respostas incorretas</b></div>
               <input placeholder="Resposta incorreta 3" class="titulo"></input>
               <input placeholder="URL da imagem 3" class="url"></input>
           </div>
-          <button onclick="tela32(this)"> Prosseguir pra criar níveis </button>
+          <button onclick="tela33(this)"> Prosseguir para criar níveis </button>
          
         </div>
         `;
-
 
     }else return alert("preencher os dados corretamente");
 
   }
   tela32();
 
+  function tela33(){
+    let Elemento = document.querySelector(".quizzes");
+   
+        Elemento.innerHTML = `
+        <div class="tela3">
+          <b>Comece pelo começo</b>
+          <input placeholder="Título do seu quizz" class="titulo"></input>
+          <input placeholder="URL da imagem do seu quizz" class="url"></input>
+          <input placeholder="Quantidade de perguntas do quizz" class="nPerguntas"></input>
+          <input placeholder="Quantidade de níveis do quizz" class="nNiveis"></input>
+          <button onclick="tela33(this)"> Prosseguir para criar perguntas </button>
+        </div>
+        `;
+    }
 
   
 
