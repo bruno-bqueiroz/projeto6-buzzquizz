@@ -31,7 +31,11 @@ body {
   height: auto;
   margin-top: 100px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
+}
+b{
+  font-size: 30px;
 }
 
 .escondido {
@@ -40,8 +44,7 @@ body {
 
 .quizzUsuario {
   width: 100%;
-  height: auto; /* deve ser mudado para auto*/
-
+  height: auto; 
   margin-bottom: 35px;
   display: flex;
   align-items: center;
@@ -163,15 +166,15 @@ body {
   margin-top: 100px;
   background-color: #ec362d;
 }
-.tela32 {
+.tela32, .tela33 {
   width: 564px;
-  height: 500px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center;
 }
-.tela32 input {
+ .tela32 input, .tela33 input {
   width: 564px;
   height: 46px;
   margin: 9px 0;
@@ -182,12 +185,12 @@ body {
   border-color: #a8a8a8;
   border-radius: 5px;
 }
-.tela32 b {
+.tela32 b, .tela33 b {
   margin-top: 10px;
   margin-bottom: 35px;
   font-size: 23px;
 }
-.tela32 button {
+.tela32 button, .tela33 button {
   border: none;
   border-style: solid;
   border-width: 1px;
