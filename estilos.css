@@ -32,6 +32,7 @@ body {
   margin-top: 100px;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 b{
@@ -166,7 +167,7 @@ b{
   margin-top: 100px;
   background-color: #ec362d;
 }
-.tela32, .tela33 {
+.tela32, .tela33, .tela34 {
   width: 564px;
   height: auto;
   display: flex;
@@ -174,7 +175,7 @@ b{
   align-items: center;
   justify-items: center;
 }
- .tela32 input, .tela33 input {
+ .tela32 input, .tela33 input, .tela34 input {
   width: 564px;
   height: 46px;
   margin: 9px 0;
@@ -185,12 +186,12 @@ b{
   border-color: #a8a8a8;
   border-radius: 5px;
 }
-.tela32 b, .tela33 b {
+.tela32 b, .tela33 b, .tela34 b {
   margin-top: 10px;
   margin-bottom: 35px;
   font-size: 23px;
 }
-.tela32 button, .tela33 button {
+.tela32 button, .tela33 button, .tela34 button {
   border: none;
   border-style: solid;
   border-width: 1px;
@@ -202,6 +203,19 @@ b{
   font-size: 21px;
   margin-top: 100px;
   background-color: #ec362d;
+}
+.botaoCinza button{
+  border: none;
+  border-style: solid #e5e5e5 ;
+  border-width: 1px;
+  border-color: none;
+  color: #818181;
+  border-radius: 30px;
+  width: 368px;
+  height: 64px;
+  font-size: 21px;
+  margin-top: 100px;
+  background-color: #e5e5e5;
 }
 
 .cor {

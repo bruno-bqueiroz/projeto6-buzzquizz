@@ -117,7 +117,7 @@ function renderizarMensagensUsuario() {
     let perguntas= document.querySelector("input.nPerguntas").value;
     let niveis = document.querySelector("input.nNiveis").value;
 
-    if(20 < titulo.length < 65 && perguntas > 2  && niveis > 1){
+    if(true){//20 < titulo.length < 65 && perguntas > 2  && niveis > 1
       let Elemento = document.querySelector(".tela3");
       Elemento.innerHTML = "";
         Elemento.innerHTML = `
@@ -203,12 +203,16 @@ function renderizarMensagensUsuario() {
             <strong>${dadosQuizz.title}</strong>
           </div>
           <button onclick="tela34(this)"> Acessar Quizz </button>
-          <button onclick="tela34(this)"> Voltar pra home </button>
-
+        <div class="botaoCinza"><button onclick="goHome(this)"> Voltar pra home </button></div>
         </div>
+        
         `;
     }
     tela34();
+    // retorna a pagina inicial
+    function goHome() {
+      window.location.reload();
+  }
 
 
 
