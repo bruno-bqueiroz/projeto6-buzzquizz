@@ -75,8 +75,6 @@ function quizz() {
     `;
     renderizarMensagensUsuario();
   renderizarMensagens();
-  
-  
 }
 quizz();
 
@@ -95,7 +93,6 @@ function popularDados(resposta) {
   renderizarMensagens();
 }
 popularDados();
-
 
 // quizzes do servidor
 function renderizarMensagens() {
@@ -174,7 +171,7 @@ function renderizarMensagensUsuario() {
      perguntas= document.querySelector("input.nPerguntas").value;
      niveis = document.querySelector("input.nNiveis").value;
 
-    if(20 < titulo.length < 65 && perguntas > 2  && niveis > 1 && url){
+    if(/*20 < titulo.length < 65 && perguntas > 2  && niveis > 1 && url*/true){
       let Elemento = document.querySelector(".tela3");
       Elemento.innerHTML = "";
         Elemento.innerHTML = `
@@ -313,9 +310,9 @@ function renderizarMensagensUsuario() {
      Respostaincorreta32 = document.querySelector("input.Respostaincorreta32").value;
      URLdaimagem32 = document.querySelector("input.URLdaimagem32").value;
 
-    if(Textodapergunta.length >= 20 && Cordefundodapergunta.length == 7 && Respostacorreta.length != 0
+    if(/*Textodapergunta.length >= 20 && Cordefundodapergunta.length == 7 && Respostacorreta.length != 0
       && Respostaincorreta1.length != 0 && Respostaincorreta2.length != 0 && Respostaincorreta3.length != 0
-      && URLdaimagem.length != 0 && URLdaimagem1.length != 0 && URLdaimagem2.length != 0 && URLdaimagem3.length != 0){     
+      && URLdaimagem.length != 0 && URLdaimagem1.length != 0 && URLdaimagem2.length != 0 && URLdaimagem3.length != 0*/true){     
     let Elemento = document.querySelector(".tela3");
    
         Elemento.innerHTML = `
@@ -479,7 +476,7 @@ function renderizarMensagensUsuario() {
     function tela34(){
        
       
-      if(titulodonível.length > 10  && descricaodonivel.length > 30 && acertominima == 0 || acertominima1 == 0){ 
+      if(/*titulodonível.length > 10  && descricaodonivel.length > 30 && acertominima == 0 || acertominima1 == 0*/true){ 
       let Elemento = document.querySelector(".quizzes");
 
       Elemento.innerHTML = `

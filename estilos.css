@@ -274,10 +274,7 @@ justify-content: space-between;
   display: grid;
 }
 @media (max-width: 1100px) {
-  .quizzes {
-    width: 340px;
-    margin-top: 100px;
-  }
+  
   .quizzServidor {
     flex-direction: column;
   }
@@ -285,4 +282,90 @@ justify-content: space-between;
     margin-top: 10px;
     margin-bottom: 10px;
   }
+  body {
+    width: 100vw;
+  }
+  
+  .inicial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .topo {
+    width: 100%;
+    margin-left: 0%;
+  }
+  .quizzes {
+    width: 100%;
+    margin-left: 0%;
+  }
+ 
+  
+  .quizzUsuario {
+    width: 100%;
+    height: auto; 
+    
+  }
+  
+  .quizzServidor {
+    width: 100%;
+    height: auto;
+   
+  }
+  
+  .quizz1 {
+     width: 100%;
+     
+    
+  }
+  
+  .quizz1 img {
+    width: 100%;
+    
+  }
+  .vazio {
+    width: 100%;
+  }
+  
+  .vazio button {
+    
+    width: 80%;
+    
+  }
+  
+  .tela3{
+    width: 100%;
+    
+
+  }
+  .tela3 input {
+    width: 95%;
+    
+  }
+  .pergunta {
+    width: 100%;
+    
+  }
+  
+  .caixa-pergunta, .caixa-pergunta1{
+    width: 100%;
+    
+  }
+  .caixa-pergunta2{
+    width: 95%;
+  }
+  .caixa-pergunta2 img {
+    width: 30px;
+    height: auto;
+  }
+ 
+  .tela32, .tela33, .tela34 {
+    width: 95%;
+   
+  }
+   .tela32 input, .tela33 input, .tela34 input {
+    width: 100%;
+    
+  }
+
 }
