@@ -3,6 +3,53 @@ let caixa = [];
 let dadosQuizzUsuario = [];
 let dadosQuizz = [];
 const urlAPI = "https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes";
+let titulo;
+let url;
+let perguntas;
+let niveis;
+
+let Textodapergunta;
+let Cordefundodapergunta;
+let Respostacorreta;
+let URLdaimagem;
+let Respostaincorreta1;
+let URLdaimagem1;
+let Respostaincorreta2;
+let URLdaimagem2;
+let Respostaincorreta3;
+let URLdaimagem3;
+
+let Textodapergunta1;
+let Cordefundodapergunta1;
+let Respostacorreta1;
+let URLdaimagem10;
+let Respostaincorreta11;
+let URLdaimagem11;
+let Respostaincorreta21;
+let URLdaimagem21;
+let Respostaincorreta31;
+let URLdaimagem31;
+
+let Textodapergunta2;
+let Cordefundodapergunta2;
+let Respostacorreta2;
+let URLdaimagem20;
+let Respostaincorreta12;
+let URLdaimagem12;
+let Respostaincorreta22;
+let URLdaimagem22;
+let Respostaincorreta32;
+let URLdaimagem32;
+
+let titulodonível;
+let acertominima;
+let imagemdonivel;
+let descricaodonivel;
+
+let titulodonível1;
+let acertominima1;
+let imagemdonivel1;
+let descricaodonivel1;  
 
 function corpo() {
   container = document.querySelector("div");
@@ -94,53 +141,7 @@ function renderizarMensagensUsuario() {
 
 
 
-  let titulo;
-  let url;
-  let perguntas;
-  let niveis;
 
-  let Textodapergunta;
-  let Cordefundodapergunta;
-  let Respostacorreta;
-  let URLdaimagem;
-  let Respostaincorreta1;
-  let URLdaimagem1;
-  let Respostaincorreta2;
-  let URLdaimagem2;
-  let Respostaincorreta3;
-  let URLdaimagem3;
-  
-  let Textodapergunta1;
-  let Cordefundodapergunta1;
-  let Respostacorreta1;
-  let URLdaimagem10;
-  let Respostaincorreta11;
-  let URLdaimagem11;
-  let Respostaincorreta21;
-  let URLdaimagem21;
-  let Respostaincorreta31;
-  let URLdaimagem31;
-
-  let Textodapergunta2;
-  let Cordefundodapergunta2;
-  let Respostacorreta2;
-  let URLdaimagem20;
-  let Respostaincorreta12;
-  let URLdaimagem12;
-  let Respostaincorreta22;
-  let URLdaimagem22;
-  let Respostaincorreta32;
-  let URLdaimagem32;
-
-  let titulodonível;
-  let acertominima;
-  let imagemdonivel;
-  let descricaodonivel;
-
-  let titulodonível1;
-  let acertominima1;
-  let imagemdonivel1;
-  let descricaodonivel1;  
 
   // terceira tela.1 criar quizz
   function criarQuizz(elemento){
@@ -163,7 +164,6 @@ function renderizarMensagensUsuario() {
  // terceira tela.2 criar as perguntas e respostas
   function tela32(){
      titulo = document.querySelector("input.titulo").value;
-     url;
     try {
       let urls = new URL(document.querySelector("input.url").value);
       url = document.querySelector("input.url").value;
@@ -174,11 +174,11 @@ function renderizarMensagensUsuario() {
      perguntas= document.querySelector("input.nPerguntas").value;
      niveis = document.querySelector("input.nNiveis").value;
 
-    if(/*20 < titulo.length < 65 && perguntas > 2  && niveis > 1 && url*/true){
+    if(20 < titulo.length < 65 && perguntas > 2  && niveis > 1 && url){
       let Elemento = document.querySelector(".tela3");
       Elemento.innerHTML = "";
         Elemento.innerHTML = `
-          <b>Crie suas perguntas</b>
+          <b>Crie suas perguntas</b>  
         <div class="tela32">
 
           <div class="pergunta">
@@ -373,7 +373,7 @@ function renderizarMensagensUsuario() {
        imagemdonivel1 = document.querySelector("input.imagemdonivel1").value;
        descricaodonivel1 = document.querySelector("input.descricaodonivel1").value;
       
-      if(titulodonível.length > 10  && 0 > acertominima <101   && descricaodonivel.length > 30 && acertominima == 0 || acertominima == 0){ 
+      if(titulodonível.length > 10  && descricaodonivel.length > 30 && acertominima == 0 || acertominima1 == 0){ 
       let Elemento = document.querySelector(".quizzes");
 
       Elemento.innerHTML = `
