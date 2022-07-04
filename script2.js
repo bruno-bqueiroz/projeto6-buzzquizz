@@ -27,7 +27,7 @@ function openQuizz(quizz) {
       let quizzAnswers = quizz.data.questions[i].answers;
       console.log(quizz.data.questions[i].answers);
       let enterQuestions = document.querySelector(`.respostas-${i}`);
-      enterQuestions.innerHTML += `<img class = "respostas" src="${quizzAnswers[a].image}"</div> <div class = "answer">${quizzAnswers[a].isCorrectAnswer}</div> <div class="texto">${quizzAnswers[a].text}</div>`;
+      enterQuestions.innerHTML += `<div class="answersContent"><img class = "respostas" src="${quizzAnswers[a].image}"> <div class = "answer">${quizzAnswers[a].isCorrectAnswer}</div> <p class="texto">${quizzAnswers[a].text}</p></div>`;
     }
   }
 }
