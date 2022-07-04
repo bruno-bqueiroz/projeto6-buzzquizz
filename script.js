@@ -146,7 +146,7 @@ function renderizarMensagensUsuario() {
   // terceira tela.1 criar quizz
   function criarQuizz(elemento){
     let Elemento = document.querySelector(".quizzes");
-   
+  
         Elemento.innerHTML = `
         <div class="tela3">
           <b>Comece pelo começo</b>
@@ -358,20 +358,126 @@ function renderizarMensagensUsuario() {
         `;
   }
   tela332();
+  function enviarMensagem() {
+    titulodonível = document.querySelector("input.Títulodonível").value;
+    acertominima = document.querySelector("input.acertominima").value;
+    imagemdonivel = document.querySelector("input.imagemdonivel").value;
+    descricaodonivel = document.querySelector("input.descricaodonivel").value;
 
+    titulodonível1 = document.querySelector("input.Títulodonível1").value;
+    acertominima1 = document.querySelector("input.acertominima1").value;
+    imagemdonivel1 = document.querySelector("input.imagemdonivel1").value;
+    descricaodonivel1 = document.querySelector("input.descricaodonivel1").value;
+   
+
+   axios.post(`https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes`, {
+     
+       title: titulo,
+       image: url,
+       questions: [
+         {
+           title: Textodapergunta,
+           color: Cordefundodapergunta,
+           answers: [
+             {
+               text: Respostacorreta,
+               image: URLdaimagem,
+               isCorrectAnswer: true
+             },
+             {
+               text: Respostaincorreta1,
+               image: URLdaimagem1,
+               isCorrectAnswer: false
+             },
+             {
+               text: Respostaincorreta2,
+               image: URLdaimagem2,
+               isCorrectAnswer: false
+             },
+             {
+               text: Respostaincorreta3,
+               image: URLdaimagem3,
+               isCorrectAnswer: false
+             }
+           ]
+         },
+         {
+           title: Textodapergunta1,
+           color: Cordefundodapergunta1,
+           answers: [
+             {
+               text: Respostacorreta1,
+               image: URLdaimagem10,
+               isCorrectAnswer: true
+             },
+             {
+               text: Respostaincorreta11,
+               image: URLdaimagem11,
+               isCorrectAnswer: false
+             },
+             {
+               text: Respostaincorreta21,
+               image: URLdaimagem21,
+               isCorrectAnswer: false
+             },
+             {
+               text: Respostaincorreta31,
+               image: URLdaimagem31,
+               isCorrectAnswer: false
+             }
+           ]
+         },
+         {
+           title: Textodapergunta2,
+           color: Cordefundodapergunta2,
+           answers: [
+             {
+               text: Respostacorreta2,
+               image: URLdaimagem20,
+               isCorrectAnswer: true
+             },
+             {
+               text: Respostaincorreta12,
+               image: URLdaimagem12,
+               isCorrectAnswer: false
+             },
+             {
+               text: Respostaincorreta22,
+               image: URLdaimagem22,
+               isCorrectAnswer: false
+             },
+             {
+               text: Respostaincorreta32,
+               image: URLdaimagem32,
+               isCorrectAnswer: false
+             }
+           ]
+         }
+       ],
+       levels: [
+         {
+           title: titulodonível,
+           image: imagemdonivel,
+           text: descricaodonivel,
+           minValue: Number(acertominima)
+         },
+         {
+           title: titulodonível1,
+           image: imagemdonivel1,
+           text: descricaodonivel1,
+           minValue: Number(acertominima1)
+         }
+       ]
+     
+   });
+   console.log("FOi");
+ }
+ enviarMensagem();
 
 
 // tela final de criação do quizz
     function tela34(){
-       titulodonível = document.querySelector("input.Títulodonível").value;
-       acertominima = document.querySelector("input.acertominima").value;
-       imagemdonivel = document.querySelector("input.imagemdonivel").value;
-       descricaodonivel = document.querySelector("input.descricaodonivel").value;
-
-       titulodonível1 = document.querySelector("input.Títulodonível1").value;
-       acertominima1 = document.querySelector("input.acertominima1").value;
-       imagemdonivel1 = document.querySelector("input.imagemdonivel1").value;
-       descricaodonivel1 = document.querySelector("input.descricaodonivel1").value;
+       
       
       if(titulodonível.length > 10  && descricaodonivel.length > 30 && acertominima == 0 || acertominima1 == 0){ 
       let Elemento = document.querySelector(".quizzes");
@@ -394,111 +500,8 @@ function renderizarMensagensUsuario() {
     }
     tela34();
 
-    function enviarMensagem() {
-      
- 
-      axios.post(`https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes`, {
-        
-          title: titulo,
-          image: url,
-          questions: [
-            {
-              title: Textodapergunta,
-              color: Cordefundodapergunta,
-              answers: [
-                {
-                  text: Respostacorreta,
-                  image: URLdaimagem,
-                  isCorrectAnswer: true
-                },
-                {
-                  text: Respostaincorreta1,
-                  image: URLdaimagem1,
-                  isCorrectAnswer: false
-                },
-                {
-                  text: Respostaincorreta2,
-                  image: URLdaimagem2,
-                  isCorrectAnswer: false
-                },
-                {
-                  text: Respostaincorreta3,
-                  image: URLdaimagem3,
-                  isCorrectAnswer: false
-                }
-              ]
-            },
-            {
-              title: Textodapergunta1,
-              color: Cordefundodapergunta1,
-              answers: [
-                {
-                  text: Respostacorreta1,
-                  image: URLdaimagem10,
-                  isCorrectAnswer: true
-                },
-                {
-                  text: Respostaincorreta11,
-                  image: URLdaimagem11,
-                  isCorrectAnswer: false
-                },
-                {
-                  text: Respostaincorreta21,
-                  image: URLdaimagem21,
-                  isCorrectAnswer: false
-                },
-                {
-                  text: Respostaincorreta31,
-                  image: URLdaimagem31,
-                  isCorrectAnswer: false
-                }
-              ]
-            },
-            {
-              title: Textodapergunta2,
-              color: Cordefundodapergunta2,
-              answers: [
-                {
-                  text: Respostacorreta2,
-                  image: URLdaimagem20,
-                  isCorrectAnswer: true
-                },
-                {
-                  text: Respostaincorreta12,
-                  image: URLdaimagem12,
-                  isCorrectAnswer: false
-                },
-                {
-                  text: Respostaincorreta22,
-                  image: URLdaimagem22,
-                  isCorrectAnswer: false
-                },
-                {
-                  text: Respostaincorreta32,
-                  image: URLdaimagem32,
-                  isCorrectAnswer: false
-                }
-              ]
-            }
-          ],
-          levels: [
-            {
-              title: titulodonível,
-              image: imagemdonivel,
-              text: descricaodonivel,
-              minValue: Number(acertominima)
-            },
-            {
-              title: titulodonível1,
-              image: imagemdonivel1,
-              text: descricaodonivel1,
-              minValue: Number(acertominima1)
-            }
-          ]
-        
-      });
-    }
     
+   
     // retorna a pagina inicial
     function goHome() {
       window.location.reload();
