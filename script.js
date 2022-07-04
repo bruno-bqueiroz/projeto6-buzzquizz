@@ -370,7 +370,7 @@ function renderizarMensagensUsuario() {
     descricaodonivel1 = document.querySelector("input.descricaodonivel1").value;
    
 
-   axios.post(`https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes`, {
+   axios.post(`https://mock-api.driven.com.br/api/v7/buzzquizz/quizzes`, {
      
        title: titulo,
        image: url,
